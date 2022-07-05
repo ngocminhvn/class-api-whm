@@ -19,3 +19,4 @@ $create_acc = $cpanel->createacct($username,$domain,$password,$plan);
 # lấy danh sách gói
 // echo $cpanel->listpkgs();
 ```
+?>
