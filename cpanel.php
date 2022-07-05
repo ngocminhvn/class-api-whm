@@ -54,7 +54,7 @@
         }
         // Unlock acc
         // https://api.docs.cpanel.net/openapi/whm/operation/unsuspendacct/
-        function unsuspendacct($unsuspendacct)
+        function unsuspendacc($unsuspendacct)
         {
             $curl = curl_init(); 
             curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0); 
@@ -70,7 +70,7 @@
         }
         // Tạo acc 
         // https://api.docs.cpanel.net/openapi/whm/operation/createacct/
-        function createacct($username,$domain,$password,$plan)
+        function createacc($username,$domain,$password,$plan)
         {
             $data = [
                 'username'     => $username,
@@ -97,7 +97,7 @@
         }
         // Xóa acc
         // https://api.docs.cpanel.net/openapi/whm/operation/removeacct/
-        function removeacct($removeacct)
+        function removeacc($removeacct)
         {
             $curl = curl_init(); 
             curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0); 
