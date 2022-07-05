@@ -1,4 +1,15 @@
 <?php
+/**
+ * Class Api Whm
+ * PHP Version >5.6
+ *
+ * @see https://github.com/ngocminhvn/class-api-whm The GitHub project
+ *
+ * @author    Trinh Ngoc Minh <trinhngocminhads@gmail.com>
+ * @copyright 2022 - Minh
+ * @note      This program is distributed in the hope that it will be useful
+ * GOOD LUCK
+ */
     class cpanel {
         public $username_whm;
         public $password_whm;
