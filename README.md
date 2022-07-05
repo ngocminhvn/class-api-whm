@@ -4,8 +4,9 @@
 <?php
 require('cpanel.php');
 
-$cpanel = new cpanel('account','pass','194.233.68.35');
+$cpanel = new cpanel('hostings','pass','194.233.68.35');
 
+# Tạo acc
 /*
 $username = 'tscam58online';
 $domain = 'likespeed.xyz';
@@ -15,6 +16,6 @@ $plan = 'hostings_basic'; // gói tạo trong whm
 $create_acc = $cpanel->createacct($username,$domain,$password,$plan);
 */
 
-# lấy danh sách plan
+# lấy danh sách gói
 // echo $cpanel->listpkgs();
 ```
