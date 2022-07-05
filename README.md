@@ -3,8 +3,8 @@
 ```PHP
 <?php
 require('cpanel.php');
-
-$cpanel = new cpanel('hostings','pass','194.233.68.35');
+# Config acc api
+$cpanel = new cpanel('username_whm','pass_whm','ip_whm');
 
 # Tạo acc
 /*
