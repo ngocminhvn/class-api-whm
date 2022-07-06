@@ -127,7 +127,6 @@
             curl_close($curl);
             return $result;
         }
-    }
         function changepass($acc,$new_password)
         {
             $curl = curl_init(); 
@@ -143,4 +142,3 @@
             curl_close($curl);
             return $result;
        }          
-    }
