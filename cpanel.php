@@ -128,3 +128,19 @@
             return $result;
         }
     }
+        function changepass($acc,$new_password)
+        {
+            $curl = curl_init(); 
+            curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0); 
+            curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+            curl_setopt($curl, CURLOPT_HEADER, 0);
+            
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+            $header[0] = "Authorization: Basic " . base64_encode($this->username . ":" . $this->password) . "\n\r";
+            curl_setopt($curl, CURLOPT_HTTPHEADER, $header); 
+            curl_setopt($curl, CURLOPT_URL, 'https://'.$this->ipaddress.':2087/json-api/passwd?api.version=1&user='.$acc.'&password='.$new_password); 
+            $result = curl_exec($curl);
+            curl_close($curl);
+            return $result;
+       }          
+    }
