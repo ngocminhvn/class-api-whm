@@ -41,16 +41,7 @@ class cpanel
     // https://api.docs.cpanel.net/openapi/whm/operation/suspendacct/
     function suspendacc($suspendacct)
     {
-        $curl = curl_init();
-        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
-        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
-        curl_setopt($curl, CURLOPT_HEADER, 0);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-        $header[0] = "Authorization: Basic " . base64_encode($this->username . ":" . $this->password) . "\n\r";
-        curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
-        curl_setopt($curl, CURLOPT_URL, 'https://' . $this->ipaddress . ':2087/json-api/suspendacct?api.version=1&user=' . $suspendacct . '&reason=Nonpayment&leave-ftp-accts-enabled=0');
-        $result = curl_exec($curl);
-        curl_close($curl);
+        $result = $this->cURL('https://' . $this->ipaddress . ':2087/json-api/suspendacct?api.version=1&user=' . $suspendacct . '&reason=Nonpayment&leave-ftp-accts-enabled=0');
         return $result;
     }
     // Unlock acc
